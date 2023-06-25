@@ -13,7 +13,7 @@ class User(AbstractUser):
     profile = models.ImageField(upload_to="profile/", null=True, blank=True,
                                 default="https://www.seekpng.com/png/detail/413-4139803_unknown-profile-profile-picture-unknown.png")
     USERNAME_FIELD = "username"
-    REQUIRED_FIELDS = ["username", "email", "first_name", "last_name", "password"]
+    REQUIRED_FIELDS = ["email", "first_name", "last_name", "password"]
     is_freelancer = False
     is_employer = False
 

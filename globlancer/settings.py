@@ -93,7 +93,7 @@ WSGI_APPLICATION = 'globlancer.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'GlobLancer',
+        'NAME': 'globlancer',
         'USER': os.getenv('POSTGRES_USER'),
         'PASSWORD': os.getenv('POSTGRES_PASSWORD'),
         'HOST': '127.0.0.1',

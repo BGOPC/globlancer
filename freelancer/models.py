@@ -22,6 +22,6 @@ class Employer(User, models.Model):
 class Project(models.Model):
     title = models.CharField(null=False, max_length=255)
     description = models.TextField(null=False)
-    freelancer = models.ForeignKey(FreeLancer, null=True, on_delete=models.SET_NULL)
-    employer = models.ForeignKey(User, null=True, on_delete=models.SET_NULL)
+    freelancer = models.ForeignKey(FreeLancer, null=True, on_delete=models.SET_NULL, related_name="freelancer")
+    employer = models.ForeignKey(Employer, null=True, on_delete=models.SET_NULL, related_name="employer")
     price = models.DecimalField(null=False, default=1000000, decimal_places=0, max_digits=9)
