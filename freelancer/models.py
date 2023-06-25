@@ -25,3 +25,4 @@ class Project(models.Model):
     freelancer = models.ForeignKey(FreeLancer, null=True, on_delete=models.SET_NULL, related_name="freelancer")
     employer = models.ForeignKey(Employer, null=True, on_delete=models.SET_NULL, related_name="employer")
     price = models.DecimalField(null=False, default=1000000, decimal_places=0, max_digits=9)
+    tags = models.ManyToManyField(Skill)

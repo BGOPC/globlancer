@@ -1,0 +1,18 @@
+{% extends '_layout.html' %}
+{% block title %}
+    GlobLancer - {{ freelancer.username }}
+{% endblock title %}
+{% block content %}
+    <div class="container mx-auto my-4 p-4 bg-teal-50 rounded-lg">
+        <h1 class="text-4xl font-bold">{{ freelancer.username }}</h1>
+        <p class="my-4">{{ freelancer.description }}</p>
+        <div class="mt-4">
+            {% for project in projects %}
+                {% include 'freelancer/includes/project.html' with project=project %}
+            {% endfor %}
+        </div>
+        <div class="mt-6 bg-white p-4 rounded-lg">
+            <p class="text-sm">Join Date: {{ freelancer.date_joined|date:"F j, Y" }}</p>
+        </div>
+    </div>
+{% endblock %}
