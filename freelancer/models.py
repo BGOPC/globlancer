@@ -15,9 +15,13 @@ class FreeLancer(User, models.Model):
     skills = models.ManyToManyField(Skill, related_name="FreeLancer_Skills")
 
 
+class Employer(User, models.Model):
+    is_employer = True
+
+
 class Project(models.Model):
     title = models.CharField(null=False, max_length=255)
     description = models.TextField(null=False)
-    freelancer = models.ForeignKey(FreeLancer, null=True, on_delete=models.deletion.SET_NULL)
-    employer = models.ForeignKey(User, null=True, on_delete=models.deletion.SET_NULL)
+    freelancer = models.ForeignKey(FreeLancer, null=True, on_delete=models.SET_NULL)
+    employer = models.ForeignKey(User, null=True, on_delete=models.SET_NULL)
     price = models.DecimalField(null=False, default=1000000, decimal_places=0, max_digits=9)
