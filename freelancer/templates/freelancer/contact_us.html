@@ -1,0 +1,53 @@
+{% extends '_layout.html' %}
+{% block title %}
+    Globlancer - Contact Us
+{% endblock %}
+{% block content %}
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-2xl font-bold mb-4">Contact Us</h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-white p-4 rounded-lg shadow">
+                <h2 class="text-lg font-semibold mb-2">Contact Information</h2>
+                <ul>
+                    <li class="flex items-center mb-2">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                        </svg>
+                        <a href="https://discord.gg/NZSEhPMm" class="hover:underline">Discord</a>
+                    </li>
+                    <li class="flex items-center mb-2">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                        </svg>
+                        <a href="https://ble.ir/join/MjE3OTkxNm" class="hover:underline">Bale</a>
+                    </li>
+                    <li class="flex items-center mb-2">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                        </svg>
+                        <a href="mailto:globlancer.company@gmail.com" class="hover:underline">Email</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="mt-8">
+            <p class="text-gray-600">Request Template:</p>
+            <p class="bg-white p-4 rounded-lg shadow mt-2">
+                Hello Dear GlobLancer Team, <br>
+                We bothered you about a project <br>
+                Project Explanation: (Put explanation here)<br>
+                Expected Time: (The maximum time limit) <br>
+                Price Range: From (Lowest Price) to (Highest Price)
+                Intended Freelancer: (freelancer username you rather work with)
+            </p>
+        </div>
+    </div>
+{% endblock %}
