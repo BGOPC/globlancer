@@ -1,6 +1,8 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.exceptions import PermissionDenied
 from django.shortcuts import get_object_or_404
+from django.shortcuts import redirect
+from django.utils.translation import activate
 from django.views.generic import TemplateView, ListView, FormView, CreateView
 
 from .forms import *
@@ -8,6 +10,11 @@ from .models import *
 
 
 # Create your views here.
+
+def switch_language(request, lang_code):
+    activate(lang_code)
+    return redirect(request.META.get('HTTP_REFERER', '/'))
+
 
 class UserFieldAccessMixin(LoginRequiredMixin):
     field_required = 'is_employer'

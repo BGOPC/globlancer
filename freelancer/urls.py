@@ -12,4 +12,5 @@ urlpatterns = [
     path("projects/", views.ProjectsListView.as_view(), name="ProjectsList"),
     path("about/", views.AboutView.as_view(), name="About"),
     path("contact/", views.ContactView.as_view(), name="Contact"),
+    path('switch-language/<str:lang_code>/', views.switch_language, name='switch_language'),
 ]

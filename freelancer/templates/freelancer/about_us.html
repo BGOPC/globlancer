@@ -1,4 +1,5 @@
 {% extends '_layout.html' %}
+{% load i18n %}
 {% block title %}
     Globlancer - About Us
 {% endblock %}
@@ -6,10 +7,15 @@
     <div class="container mx-auto px-4 py-8">
         <div class="bg-color-b rounded-lg p-4">
             <div class="bg-color-a rounded-lg p-4">
-                <h1 class="text-2xl font-bold mb-4">About Us</h1>
-                <p class="text-gray-800">Write about your company or organization here.</p>
-                <p class="text-gray-800">You can provide information about your mission, values, history, team, or any
-                    other relevant details.</p>
+                <h1 class="text-2xl font-bold mb-4">{% trans 'About Us' %}</h1>
+                <p class="text-gray-800">{% trans 'GlobLancer is a freelancing team who does freelancing projects together;' %}<br>
+                {% trans "We're mostly active at college final projects and college homeworks, and we're located in Iran." %}<br>
+                    {% trans 'Our team has mastered Python, Java, Js, and Cpp, Also Django framework, Pygame, Turtle, pyQt, and etc.' %}
+                </p>
+                <p class="text-gray-800">{% trans 'Our team is made of people with years of experience from Sharif University and Allameh Helli 1,' %}
+                    <br> {% trans 'with years of experience in programming, we try our best to give the best experience to our customers,' %}
+                    <br> {% trans 'Next time You had a project, You know who to call :).' %}
+                </p>
             </div>
         </div>
     </div>
