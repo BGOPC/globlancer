@@ -1,6 +1,8 @@
 from django import forms
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from django.utils.translation import gettext_lazy as _
+from phonenumber_field.formfields import PhoneNumberField
+from phonenumber_field.widgets import PhoneNumberPrefixWidget
 
 from users.models import User
 
@@ -14,8 +16,19 @@ class NewUserForm(UserCreationForm):
             "placeholder": _("Email"),
         })
     )
-
-    # ... (other fields)
+    phone = PhoneNumberField(
+        label=_('Phone number'),
+        required=True,
+        region='IR',
+        widget=PhoneNumberPrefixWidget(
+            initial='IR',
+            attrs={
+                'class': 'appearance-none block w-full bg-gray-200 text-center text-gray-700 border border-red-500 '
+                         'rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white',
+                'placeholder': _('Phone number')
+            }
+        )
+    )
 
     class Meta:
         model = User
