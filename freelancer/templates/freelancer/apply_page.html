@@ -1,4 +1,37 @@
 {% extends '_layout.html' %}
 {% block title %}
-Globlancer - Apply
+    Globlancer - Apply
+{% endblock %}
+{% block scripts %}
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let jobField = document.querySelector("#id_job");
+            let conditionalFields = {
+                "A": ["id_skills"],
+                "B": []
+            };
+
+            function showFields() {
+                let selectedJob = jobField.value;
+                let fieldsToShow = conditionalFields[selectedJob];
+                let form = document.querySelector("form");
+
+
+                form.querySelectorAll(".conditional-field").forEach(function (field) {
+                    field.style.display = "none";
+                });
+
+
+                fieldsToShow.forEach(function (fieldName) {
+                    let field = form.querySelector("#id_" + fieldName);
+                    if (field) {
+                        field.style.display = "";
+                    }
+                });
+            }
+
+            showFields();
+            jobField.addEventListener("change", showFields);
+        });
+    </script>
 {% endblock %}

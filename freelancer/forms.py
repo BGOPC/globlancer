@@ -17,8 +17,8 @@ class ApplyForm(forms.Form):
     skills = forms.ModelMultipleChoiceField(
         queryset=Skill.objects.all(),
         widget=forms.CheckboxSelectMultiple(attrs={
-            'class': 'hidden bg-gray-200 text-gray-700 border border-sky-600 rounded py-3 '
-                     'px-4 mb-3 focus:outline-none focus:bg-gray-300',
+            'class': 'bg-gray-200 text-gray-700 border border-sky-600 rounded py-3 '
+                     'px-4 mb-3 focus:outline-none focus:bg-gray-300 conditional-field',
         })
     )
 
