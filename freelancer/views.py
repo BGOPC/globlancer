@@ -68,7 +68,7 @@ class ApplyView(FormView, LoginRequiredMixin):
         return context
 
 
-class NewProjectView(CreateView, LoginRequiredMixin, UserFieldAccessMixin):
+class NewProjectView(CreateView, UserFieldAccessMixin):
     model = Project
     form_class = NewProjectForm
     template_name = "freelancer/new_project_page.html"

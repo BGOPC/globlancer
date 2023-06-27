@@ -147,7 +147,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LANGUAGES = [
     ('en', 'English'),
-    ('fa_IR', 'Persian'),
+    ('fa', 'Persian'),
 ]
 LOCALE_PATHS = [
     os.path.join(BASE_DIR, 'locale'),

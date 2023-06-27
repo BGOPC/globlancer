@@ -5,7 +5,25 @@ from .models import *
 
 
 class ApplyForm(forms.Form):
-    pass  # Class to apply to be a freelancer or employer
+    job = forms.ChoiceField(choices=[('A', 'Freelancer'), ('B', 'Employer')], widget=forms.RadioSelect(attrs={
+        "class": "",
+    }))
+
+    def conditional_fields(self):
+        if self['selection'].value() == 'A':
+            return ['a1', 'a2']
+        elif self['selection'].value() == 'B':
+            return ['b1', 'b2']
+        else:
+            return []
+
+    def get_visible_fields(self):
+        visible_fields = list(self.fields.keys())
+        conditional_fields = self.conditional_fields()
+        for field_name in conditional_fields:
+            if field_name in visible_fields:
+                visible_fields.remove(field_name)
+        return visible_fields
 
 
 # TODO: Create an apply form

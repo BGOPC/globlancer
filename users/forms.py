@@ -1,5 +1,6 @@
 from django import forms
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
+from django.forms import ClearableFileInput
 from django.utils.translation import gettext_lazy as _
 from phonenumber_field.formfields import PhoneNumberField
 from phonenumber_field.widgets import PhoneNumberPrefixWidget
@@ -32,7 +33,7 @@ class NewUserForm(UserCreationForm):
 
     class Meta:
         model = User
-        fields = ("first_name", "last_name", "email", "password1", "password2", "profile")
+        fields = ("first_name", "last_name", "email", "password1", "password2", "profile_picture")
         help_texts = {
             'password1': _("Your password shouldn't be fully numeric and should have at least 8 characters."),
         }
@@ -58,6 +59,11 @@ class NewUserForm(UserCreationForm):
                 "class": "appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3"
                          "mb-3 leading-tight focus:outline-none text-center focus:bg-white px-4",
                 "placeholder": _("Last Name"),
+            }),
+            "profile_picture": ClearableFileInput(attrs={
+                'class': 'appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 '
+                         'mb-3 leading-tight focus:outline-none text-center focus:bg-white px-4',
+                'placeholder': _('Profile picture')
             }),
             'password1': forms.PasswordInput(attrs={
                 'autocomplete': 'current-password',

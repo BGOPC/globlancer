@@ -18,6 +18,7 @@ class FreeLancer(User, models.Model):
 
 class Employer(User, models.Model):
     is_employer = True
+    description = models.TextField(null=False, default="No Description Provided")
 
 
 class Project(models.Model):
