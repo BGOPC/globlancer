@@ -8,12 +8,23 @@ class ApplyForm(forms.Form):
     job = forms.ChoiceField(choices=[('A', 'Freelancer'), ('B', 'Employer')], widget=forms.RadioSelect(attrs={
         "class": "",
     }))
+    description = forms.CharField(widget=forms.Textarea(attrs={
+        'class': "appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3"
+                 "mb-3 leading-tight focus:outline-none focus:bg-white text-center px-4",
+        'placeholder': _('Description')
+    }))
+
+    skills = forms.ModelMultipleChoiceField(
+        queryset=Skill.objects.all(),
+        widget=forms.CheckboxSelectMultiple(attrs={
+            'class': 'hidden bg-gray-200 text-gray-700 border border-sky-600 rounded py-3 '
+                     'px-4 mb-3 focus:outline-none focus:bg-gray-300',
+        })
+    )
 
     def conditional_fields(self):
-        if self['selection'].value() == 'A':
-            return ['a1', 'a2']
-        elif self['selection'].value() == 'B':
-            return ['b1', 'b2']
+        if self['job'].value() == 'A':
+            return ['skill']
         else:
             return []
 
@@ -24,9 +35,6 @@ class ApplyForm(forms.Form):
             if field_name in visible_fields:
                 visible_fields.remove(field_name)
         return visible_fields
-
-
-# TODO: Create an apply form
 
 
 class NewProjectForm(forms.ModelForm):
