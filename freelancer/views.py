@@ -107,7 +107,8 @@ class ProjectDetailView(TemplateView):
 class ProjectsListView(ListView):
     model = Project
     template_name = "freelancer/projects_page.html"
-    paginate_by = 50
+    paginate_by = 30
+    context_object_name = "projects"
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
