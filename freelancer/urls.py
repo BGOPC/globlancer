@@ -6,7 +6,7 @@ urlpatterns = [
     # path("", views.HomeView.as_view()),
     path("", views.AboutView.as_view()), # Temporary
     path("freelancers/", views.FreeLancersListView.as_view(), name="FreeLancersList"),
-    path("freelancer/<str:username>", views.FreeLancerView.as_view(), name="FreeLancerList"),
+    path("freelancer/<str:username>", views.FreeLancerView.as_view(), name="FreeLancer"),
     path("apply", views.ApplyView.as_view(), name="Apply"),
     path("new", views.NewProjectView.as_view(), name="NewProject"),
     path("project/<int:projectID>", views.ProjectDetailView.as_view(), name="Project"),
