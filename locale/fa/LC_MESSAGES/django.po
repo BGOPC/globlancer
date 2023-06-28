@@ -49,6 +49,46 @@ msgstr "وارد شده به عنوان"
 msgid "Not Logged In"
 msgstr "وارد نشده"
 
+msgid "Email"
+msgstr "ایمیل"
+
+msgid "Phone Number"
+msgstr "شماره تلفن"
+
+msgid "user name"
+msgstr "نام کاربری"
+
+msgid "first name"
+msgstr "نام"
+
+msgid "last name"
+msgstr "نام خانوادگی"
+
+
+msgid "name"
+msgstr "نام"
+
+msgid "user"
+msgstr "کاربر"
+
+msgid "password"
+msgstr "رمز ورود"
+
+msgid "repeat"
+msgstr "تکرار"
+
+msgid "Profile picture"
+msgstr "تصویر پروفایل"
+
+msgid "Username"
+msgstr "نام کاربری"
+
+msgid "Title"
+msgstr "عنوان"
+
+msgid "Price"
+msgstr "قیمت"
+
 #: venv/lib/python3.10/site-packages/IPython/core/tests/test_completer.py:420
 msgid "open('foo"
 msgstr ""
