@@ -67,6 +67,18 @@ class ApplyView(FormView, LoginRequiredMixin):
         context['user'] = self.request.user if self.request.user.is_authenticated else None
         return context
 
+    def form_valid(self, form):
+        job = form.cleaned_data['job']
+        skills = form.cleaned_data['skills'] or None
+        description = form.cleaned_data['description']
+
+        if job == 'A':
+            obj = FreeLancer.objects.create(job=job, description=description)
+            obj.skills.set(skills)
+        elif job == 'B':
+            obj = Employer.objects.create(job=job, description=description)
+        return super().form_valid(form)
+
 
 class NewProjectView(CreateView, UserFieldAccessMixin):
     model = Project

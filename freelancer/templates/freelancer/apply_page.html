@@ -35,3 +35,23 @@
         });
     </script>
 {% endblock %}
+{% block content %}
+    <form method="post" id="signupForm"
+          class="bg-slate-400 w-1/2 mx-auto items-center justify-center px-5 border-2 border-gray-900 py-3 rounded-3 h-100 my-4"
+          enctype="multipart/form-data">
+        {% csrf_token %}
+        <div>
+            <label class="block text-center font-weight-bold text-lg">Freelancer Or Employer</label>
+            {{ form.job }}
+        </div>
+        <div>
+            <label class="block text-center font-weight-bold text-lg">Description</label>
+            {{ form.description }}
+        </div>
+
+        <div>
+            <label class="block text-center font-weight-bold text-lg">Skills(Freelancers)</label>
+            {{ form.skills }}
+        </div>
+    </form>
+{% endblock %}
