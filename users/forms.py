@@ -67,12 +67,12 @@ class NewUserForm(UserCreationForm):
             }),
             'password1': forms.PasswordInput(attrs={
                 'class': 'appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded '
-                         'py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white',  # Add required classes
+                         'py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white',
                 'placeholder': _('Password'),
             }),
             'password2': forms.PasswordInput(attrs={
                 'class': 'appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded '
-                         'py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white',  # Add required classes
+                         'py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white',
                 'placeholder': _('Repeat Password'),
             }),
         }
