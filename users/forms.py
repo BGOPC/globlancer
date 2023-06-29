@@ -66,16 +66,14 @@ class NewUserForm(UserCreationForm):
                 'placeholder': _('Profile picture')
             }),
             'password1': forms.PasswordInput(attrs={
-                'autocomplete': 'current-password',
-                "class": "appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3"
-                         "mb-3 leading-tight focus:outline-none focus:bg-white text-center px-4",
-                "placeholder": _("Password"),
+                'class': 'appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded '
+                         'py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white',  # Add required classes
+                'placeholder': _('Password'),
             }),
             'password2': forms.PasswordInput(attrs={
-                'autocomplete': 'current-password',
-                "class": "appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3"
-                         "mb-3 leading-tight focus:outline-none focus:bg-white text-center px-4",
-                "placeholder": _("Repeat Password"),
+                'class': 'appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded '
+                         'py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white',  # Add required classes
+                'placeholder': _('Repeat Password'),
             }),
         }
 

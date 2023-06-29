@@ -9,6 +9,9 @@ from users.models import User
 class Skill(models.Model):
     name = models.CharField(null=False, max_length=255, db_index=True, unique=True)
 
+    def __str__(self):
+        return self.name
+
 
 class FreeLancer(User, models.Model):
     is_freelancer = True

@@ -1,27 +1,28 @@
 {% extends '_layout.html' %}
 {% block title %}
-Globlancer - New Project
+    Globlancer - New Project
 {% endblock %}
 {% block content %}
-<form method="post" id="signupForm"
-          class="bg-slate-400 w-1/2 mx-auto items-center justify-center px-5 border-2 border-gray-900 py-3 rounded-3 h-100 my-4"
+    <br>
+    <form method="post" id="signupForm"
+          class="bg-slate-400 w-1/2 mx-auto items-center justify-center px-5 py-3 rounded-lg h-100 my-4"
           enctype="multipart/form-data">
         {% csrf_token %}
         <div>
-            <label class="block text-center font-weight-bold text-lg">Project Title</label>
+            <label class="block text-center font-weight-bold text-lg my-2">Project Title</label>
             {{ form.title }}
         </div>
         <div>
-            <label class="block text-center font-weight-bold text-lg">Description</label>
+            <label class="block text-center font-weight-bold text-lg my-2">Description</label>
             {{ form.description }}
         </div>
 
         <div>
-            <label class="block text-center font-weight-bold text-lg">Price</label>
+            <label class="block text-center font-weight-bold text-lg my-2">Price(IRR)</label>
             {{ form.price }}
         </div>
         <div>
-            <label class="block text-center font-weight-bold text-lg">Tags</label>
+            <label class="block text-center font-weight-bold text-lg my-2">Tags</label>
             {{ form.tags }}
         </div>
         <div class="text-center">

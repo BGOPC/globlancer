@@ -10,7 +10,7 @@ class ApplyForm(forms.Form):
     }))
     description = forms.CharField(widget=forms.Textarea(attrs={
         'class': "appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3"
-                 "mb-3 leading-tight focus:outline-none focus:bg-white text-center px-4",
+                 "mb-3 leading-tight focus:outline-none focus:bg-gray-100 text-center px-4",
         'placeholder': _('Description')
     }))
 
@@ -44,17 +44,17 @@ class NewProjectForm(forms.ModelForm):
         widgets = {
             'title': forms.TextInput(attrs={
                 'class': "appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3"
-                         "mb-3 leading-tight focus:outline-none focus:bg-white text-center px-4",
+                         "mb-3 leading-tight focus:outline-none focus:bg-gray-100 text-center px-4",
                 'placeholder': _('Title')
             }),
             'description': forms.Textarea(attrs={
                 'class': "appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3"
-                         "mb-3 leading-tight focus:outline-none focus:bg-white text-center px-4",
+                         "mb-3 leading-tight focus:outline-none focus:bg-gray-100 text-center px-4",
                 'placeholder': _('Description')
             }),
             'price': forms.NumberInput(attrs={
                 'class': "appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3"
-                         "mb-3 leading-tight focus:outline-none focus:bg-white text-center px-4",
+                         "mb-3 leading-tight focus:outline-none focus:bg-gray-100 text-center px-4",
                 'placeholder': _('Price')
             }),
             'tags': forms.CheckboxSelectMultiple(attrs={

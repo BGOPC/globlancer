@@ -1,0 +1,5 @@
+.particle {
+    width: 100%;
+    background: linear-gradient(to bottom right, #21795c, #60448d);
+    position: relative;
+}
