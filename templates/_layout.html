@@ -15,7 +15,7 @@
         GlobLancer
     {% endblock title %}</title>
     <style>
-        .particle {
+        #particles-js {
             width: 100%;
             background: linear-gradient(to bottom right, #21795c, #60448d);
             position: relative;
@@ -25,6 +25,7 @@
     </style>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="{% static 'particle.js' %}"></script>
 
     {% block styles %}
 
@@ -35,7 +36,7 @@
 </head>
 <body>
 {% include "partials/header.html" %}
-<div class="particle">
+<div id="particles-js">
     <br>
     {% block content %}
     {% endblock %}
