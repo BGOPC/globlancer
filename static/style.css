@@ -1,5 +1,84 @@
-.particle {
-    width: 100%;
-    background: linear-gradient(to bottom right, #21795c, #60448d);
-    position: relative;
+.no-pointer-action {
+    pointer-events: none;
+}
+
+.text-blueGray-900 {
+    color: #071221;
+}
+
+.bg-blueGray-900 {
+    background-color: #071221;
+}
+
+.text-blueGray-800 {
+    color: #0C1929;
+}
+
+.bg-blueGray-800 {
+    background-color: #0C1929;
+}
+
+.text-blueGray-700 {
+    color: #27374D;
+}
+
+.bg-blueGray-700 {
+    background-color: #27374D;
+}
+
+.text-blueGray-600 {
+    color: #1F344D;
+}
+
+.bg-blueGray-600 {
+    background-color: #1F344D;
+}
+
+
+.text-blueGray-500 {
+    color: #526D82;
+}
+
+.bg-blueGray-500 {
+    background-color: #526D82;
+}
+
+.text-blueGray-400 {
+    color: #7694A5;
+}
+
+.bg-blueGray-400 {
+    background-color: #7694A5;
+}
+
+.text-blueGray-300 {
+    color: #9EB6C5;
+}
+
+.bg-blueGray-300 {
+    background-color: #9EB6C5;
+}
+
+.text-blueGray-200 {
+    color: #DDE6ED;
+}
+
+.bg-blueGray-200 {
+    background-color: #DDE6ED;
+}
+
+.text-blueGray-100 {
+    color: #F4F6F9;
+}
+
+.bg-blueGray-100 {
+    background-color: #F4F6F9;
+}
+
+.text-coolGray-500 {
+    color: #9DB2BF;
+}
+
+.bg-coolGray-500 {
+    background-color: #9DB2BF;
 }
