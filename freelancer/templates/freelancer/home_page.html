@@ -3,8 +3,90 @@
 {% block title %}
     GlobLancer - Home
 {% endblock title %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+{% endblock %}
 {% block content %}
-    <div class="flex">
+    <div class="flex p-4">
+        <div class="container bg-slate-300 shadow-2xl no-pointer-action relative w-1/5 h-max p-2 m-6  h-full rounded-lg justify-center justify-items-center items-center   ">
+            <div class="grow p-2 rounded-3xl">
+                <h1 class="text-2xl font-bold mb-4">About Us</h1>
+                <p class="">GlobLancer is a freelancing team who does freelancing projects
+                    together;<br>
+                    We're mostly active at college final projects and college homeworks, and we're located in
+                    Iran.<br>
+                    Our team has mastered Python, Java, Js, and Cpp, Also Django framework, Pygame, Turtle, pyQt,
+                    and
+                    etc.
+                </p>
+                <p class="">Our team is made of people with years of experience from Sharif University
+                    and
+                    Allameh Helli 1,
+                    <br> with years of experience in programming, we try our best to give the best experience to our
+                    customers,
+                    <br> Next time You had a project, You know who to call :)
+                </p>
+            </div>
+            <p class=" p-4 bg-gray-200 rounded-2xl my-4">
+                <span class="text-red-900">Email: globlancer.company@gmail.com</span>
+                <br>
+                <span class="text-sky-900">Bale: @globlancer</span>
+                <br>
+                <span class="text-indigo-950">Discord: <a href="https://discord.gg/NZSEhPMm">open</a></span>
+            <p>
+            <h2 class="text-lg font-semibold center">Contact Us Using This Template</h2>
+            <p class=" p-4 rounded-lg bg-slate-200 shadow mt-2">
+                Hello Dear GlobLancer Team, <br>
+                We bothered you about a project <br>
+                Project Explanation: (Put explanation here)<br>
+                Expected Time: (The maximum time limit) <br>
+                Price Range: From (Lowest Price) to (Highest Price) <br>
+                Intended Freelancer: (freelancer username)
+            </p>
+        </div>
+        <div class="m-14"></div>
+        <div class="grid bg-slate-300 grid-cols-3 grid-rows-3 rounded-2xl p-2 w-2/3 justify-center items-center justify-items-center text-center content-center">
+            <div class="p-2 m-2 rounded-lg bg-slate-200 shadow-md border border-gray-300 h-32">
+                <h4 class="text-lg text-blue-900">Coding</h4>
+                <p class="text-gray-900">Web, CLI, Java OOP, C/C++, DataScience<br>
+                    Debugging, Fixing Host Problems
+                </p>
+            </div>
+            <div class="p-2 m-2 rounded-lg bg-gray-200 shadow-md border border-gray-300 h-32">
+                <h1 class="text-lg text-black">Photo and Video Editing</h1>
+                <p class="text-sm text-gray-900">Logos, Prototypes, Banners and Videos<br>
+                </p>
+            </div>
+            <div class="p-2 m-2 rounded-lg bg-stone-100 shadow-md border border-gray-300 h-32">
+                <h1 class="text-lg text-black">Data Entry, File Converting</h1>
+                <p class="text-gray-900">Notes, Books<br>
+                    Inserting data from pdf to word etc.
+                </p>
+            </div>
+            <div class="p-2 m-2 rounded-lg col-start-1 col-end-3 bg-neutral-100 shadow-md border border-gray-300 h-44">
+                <h1 class="text-lg font-semibold text-gray-900">How Does Your Projects Are Done?</h1>
+                <p class="text-gray-900">When You submit Your project it gets Categorized, Then the freelancers are
+                    going to contact you
+                    through email, after that you should select the preferred freelancer
+                    after this, our job is done, and payment, etc. are on you and the freelancer.
+                </p>
+            </div>
+            <div class="p-2 m-2 rounded-lg col-start-3 bg-slate-200 shadow-md border border-gray-300 h-44">
+                <h1 class="text-lg text-blue-900">Apply</h1>
+                <p class="text-gray-900">Apply To Become a Freelancer/Employer</p>
+            </div>
+            <div class="p-2 m-4 rounded-lg col-start-1 col-end-2 bg-gray-200 shadow-md border border-gray-300 w-full h-full">
+                <h1 class="text-lg text-black my-2">Projects List</h1>
+                <div class="flex flex-row">
+                    {% for project in projects %}
+                        <span class="block w-full h-12 rounded-2xl bg-teal-200 p-2 m-2 self-center"><span class="text-lg">{{ project.title }}</span> {{ project.price }}IRRs</span>
+                    {% endfor %}
+                </div>
+            </div>
 
+            <div class="p-2 m-2 rounded-lg col-start-2 col-end-4 bg-stone-200 shadow-md border border-gray-300">
+                <img src="" alt="Logo" class="rounded-full">
+            </div>
+        </div>
     </div>
 {% endblock content %}

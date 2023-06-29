@@ -32,6 +32,9 @@ class HomeView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['user'] = self.request.user if str(self.request.user) != "AnonymousUser" else None
+        projects = Project.objects.all().order_by('-created_at')[:5]
+        context['projects'] = projects
+        return context
 
 
 class FreeLancersListView(ListView):
